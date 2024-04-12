@@ -1,0 +1,22 @@
+{
+    "name": "xuborx/product-barcode",
+    "description": "Barcode generation module.",
+    "type": "magento2-module",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "denys",
+            "email": "deniskorh@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "picqer/php-barcode-generator": "*"
+    },
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "CGI\\ProductBarcode\\": ""
+        }
+    }
+}

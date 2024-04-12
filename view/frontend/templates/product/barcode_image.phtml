@@ -1,0 +1,20 @@
+<?php
+$viewModel = $block->getData('viewModel');
+$barcodeImageAndValue = $viewModel->getBarcodeImageAndValue();
+?>
+<?php if ($barcodeImageAndValue): ?>
+    <div class="product-barcode">
+        <div class="barcode-image">
+            <img src="/<?= $block->escapeUrl($barcodeImageAndValue['barcodeImage']) ?>" alt="Barcode Image">
+        </div>
+        <div class="barcode-value">
+            <?= $barcodeImageAndValue['barcodeValue'] ?>
+        </div>
+    </div>
+<?php endif; ?>
+
+<style>
+    .product-barcode {
+        text-align: center;
+    }
+</style>
